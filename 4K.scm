@@ -5,6 +5,8 @@
 
 ;;; PUZZLE -- Forest Baskett's Puzzle benchmark, originally written in Pascal.
 
+(define (main repeat input)
+
 (define (my-iota n)
   (do ((n n (- n 1))
        (list '() (cons (- n 1) list)))
@@ -142,7 +144,6 @@
       *kount*
       #f)))
 
-(define (main repeat input)
   (##exec-stats
    (lambda ()
      (let loop ((n repeat) (result #f))
